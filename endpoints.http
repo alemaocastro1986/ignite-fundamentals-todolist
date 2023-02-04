@@ -1,0 +1,36 @@
+@API_URL= http://localhost:3333
+
+### Get api info
+GET {{API_URL}}
+
+### Get all tasks
+GET {{API_URL}}/tasks
+
+### Search tasks by title or description
+GET {{API_URL}}/tasks
+  ?search=John Doe
+
+### Create task
+POST {{API_URL}}/tasks
+Content-Type: application/json
+
+{
+  "title": "First",
+  "description": "First task by John Doe"
+}
+
+### Update task
+PUT {{API_URL}}/tasks/9068d775-fa9f-46b8-a034-aca7a20e7b50
+Content-Type: application/json
+
+{
+  "title": "My Fisrt task"
+}
+
+### Complete  task
+PATCH  {{API_URL}}/tasks/68052a33-0b01-4eae-8f59-3f23eab04862/complete
+
+
+### Remove Task by Id
+DELETE {{API_URL}}/tasks/9068d775-fa9f-46b8-a034-aca7a20e7b50
+
